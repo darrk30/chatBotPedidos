@@ -1,0 +1,28 @@
+{
+  "name": "chatbotpedidos",
+  "version": "1.0.0",
+  "description": "Este proyecto permite enviar mensajes automatizados por WhatsApp con un servidor Express que maneja la conexión con WhatsApp Web usando `whatsapp-web.js`.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrk30/chatBotPedidos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrk30/chatBotPedidos/issues"
+  },
+  "homepage": "https://github.com/darrk30/chatBotPedidos#readme",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "express": "^5.1.0",
+    "path": "^0.12.7",
+    "qrcode": "^1.5.4",
+    "whatsapp-web.js": "^1.31.0"
+  }
+}

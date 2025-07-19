@@ -30,7 +30,8 @@ Ejecuta el siguiente comando en la raíz del proyecto:
 
 ```bash
 npm init -y
-npm i exprss whatsapp-web.js
+npm i express
+npm i whatsapp-web.js 
 npm i axios
 npm i qrcode
 npm i path

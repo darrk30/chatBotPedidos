@@ -6,3 +6,5 @@ node_modules/
 
 # Ignora la carpeta de dependencias de PHP/Laravel (si usas Laravel)
 vendor/
+wwebjs_auth/
+wwebjs_cache/

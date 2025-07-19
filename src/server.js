@@ -1,18 +1,16 @@
-const express = require('express');
-const { startWhatsApp } = require('./lib/whatsapp');
+const express = require("express");
+const { loadBotsFromDisk } = require("./core/botManager");
 const app = express();
-
 const puerto = 3800;
 
-// Middlewares
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Rutas
-app.use('/api', require('./routes/links'));
+app.use('/api', require('./routes/bots'));
 
-// Inicializar WhatsApp
-startWhatsApp();
+// 🧠 Recargar bots guardados
+loadBotsFromDisk();
 
 // Iniciar servidor
 app.listen(puerto, () => {

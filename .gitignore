@@ -8,3 +8,4 @@ node_modules/
 vendor/
 .wwebjs_auth/
 .wwebjs_cache/
+sessions/

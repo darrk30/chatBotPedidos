@@ -1,7 +1,7 @@
 
 # 🤖 Bot de WhatsApp con Express y Electron
 
-Este proyecto permite enviar mensajes automatizados por WhatsApp mediante una interfaz de escritorio construida con Electron y un servidor Express que maneja la conexión con WhatsApp Web usando `whatsapp-web.js`.
+Este proyecto permite enviar mensajes automatizados por WhatsApp con un servidor Express que maneja la conexión con WhatsApp Web usando `whatsapp-web.js`.
 
 ---
 
@@ -10,10 +10,6 @@ Este proyecto permite enviar mensajes automatizados por WhatsApp mediante una in
 Asegúrate de tener instalado lo siguiente:
 
 - Node.js (versión LTS recomendada)
-- Google Chrome (usado por Puppeteer)
-- Git (opcional, para clonar el proyecto)
-
----
 
 ## 🚀 Pasos para ejecutar el bot
 
@@ -33,62 +29,41 @@ O simplemente descarga el ZIP y extrae el contenido.
 Ejecuta el siguiente comando en la raíz del proyecto:
 
 ```bash
-npm install
+npm init -y
+npm i exprss whatsapp-web.js
+npm i axios
+npm i qrcode
+npm i path
 ```
 
 ---
 
-### 3. Dependencias utilizadas
-
-Estas dependencias se instalan automáticamente al hacer `npm install`, pero puedes instalarlas manualmente si deseas:
+### 3. Ejecutar el bot
 
 ```bash
-npm install express
-npm install whatsapp-web.js
-npm install qrcode-terminal
-npm install axios
-npm install cors
-npm install nodemon --save-dev
-npm install electron --save-dev
-```
-
----
-
-### 4. Ejecutar el bot
-
-```bash
-npm start
+npm run dev
 ```
 
 Esto abrirá una ventana de escritorio con una interfaz para configurar el número y puerto, y también iniciará el servidor Express.
 
 ---
 
-### 5. Uso del bot
+### 4. Uso del bot
 
+- mediante postman ejecuta http://localhost:3800/api/qr metodo GET
 - Escanea el código QR con WhatsApp en tu teléfono.
 - En la interfaz del bot:
   - Escribe el número de teléfono al que enviar mensajes.
   - Haz clic en **Iniciar**.
+  - envia mensajes por http://localhost:3800/api/enviarMensaje metodo POST
   - Luego escribe el mensaje y presiona **Enviar**.
+  - {numero: '51XXXXXXXXX', mensaje: "hola"}
 
 ---
 
-### 6. API HTTP (opcional)
+### 5. API HTTP (opcional)
 
 Puedes enviar mensajes desde otro sistema con una petición POST a:
-
-```
-http://localhost:3000/send
-```
-
-#### Ejemplo usando `curl`:
-
-```bash
-curl -X POST http://localhost:3000/send \
-  -H "Content-Type: application/json" \
-  -d '{"number": "51987654321", "message": "Hola desde API"}'
-```
 
 ---
 

@@ -1,0 +1,8 @@
+# Ignora el archivo de configuración de entorno
+.env
+
+# Ignora la carpeta de dependencias de Node.js
+node_modules/
+
+# Ignora la carpeta de dependencias de PHP/Laravel (si usas Laravel)
+vendor/
